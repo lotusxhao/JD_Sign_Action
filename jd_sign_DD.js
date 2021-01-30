@@ -8,7 +8,7 @@ const rp = require('request-promise')
 const download = require('download')
 
 // 京东cookie
-const c = process.env.JD_COOKIE_DD
+const cookieDD = process.env.JD_COOKIE_DD
 // Server酱SCKEY
 const push_key = process.env.PUSH_KEY
 
