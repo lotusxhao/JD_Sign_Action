@@ -13,7 +13,8 @@ on:
     types: started
     
 env:
-  JD_COOKIE: ${{ secrets.JD_COOKIE }}
+  JD_COOKIE_HX: ${{ secrets.JD_COOKIE_HX }}
+  JD_COOKIE_DD: ${{ secrets.JD_COOKIE_DD }}
   PUSH_KEY: ${{ secrets.PUSH_KEY }}
   UPLOAD_BESULT_DIR: true
 
