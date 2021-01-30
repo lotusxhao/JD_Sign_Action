@@ -8,7 +8,7 @@ const rp = require('request-promise')
 const download = require('download')
 
 // 京东cookie
-const cookie = process.env.JD_COOKIE_DD
+const cookieDD = process.env.JD_COOKIE_DD
 // Server酱SCKEY
 const push_key = process.env.PUSH_KEY
 
@@ -43,7 +43,7 @@ Date.prototype.Format = function (fmt) {
 
 function setupCookie() {
   var js_content = fs.readFileSync(js_path, 'utf8')
-  js_content = js_content.replace(/var Key = ''/, `var Key = '${cookie}'`)
+  js_content = js_content.replace(/var Key = ''/, `var Key = '${cookieDD}'`)
   fs.writeFileSync(js_path, js_content, 'utf8')
 }
 
