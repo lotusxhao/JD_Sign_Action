@@ -15,6 +15,7 @@ on:
 env:
   JD_COOKIE_HX: ${{ secrets.JD_COOKIE_HX }}
   JD_COOKIE_DD: ${{ secrets.JD_COOKIE_DD }}
+  JD_COOKIE_Meixin: ${{ secrets.JD_COOKIE_MEIXIN }}
   PUSH_KEY: ${{ secrets.PUSH_KEY }}
   UPLOAD_BESULT_DIR: true
 
@@ -40,6 +41,9 @@ jobs:
             - name: Run Script
               run: node jd_sign_DD.js 
                              
+            - name: Run Script
+              run: node jd_sign_Meixin.js 
+              
             - name: Upload result file
               uses: actions/upload-artifact@master
               if: env.UPLOAD_BESULT_DIR == 'true'
