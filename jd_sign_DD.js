@@ -8,7 +8,7 @@ const rp = require('request-promise')
 const download = require('download')
 
 // 京东cookie
-const cookieDD = process.env.JD_COOKIE_DD
+const c = process.env.JD_COOKIE_DD
 // Server酱SCKEY
 const push_key = process.env.PUSH_KEY
 
@@ -88,7 +88,7 @@ function sendNotificationIfNeed() {
 
 function main() {
 
-  if (!cookie) {
+  if (!cookieDD) {
     console.log('请配置京东cookie!'); return;
   }
 
