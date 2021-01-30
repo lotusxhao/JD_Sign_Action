@@ -88,7 +88,7 @@ function sendNotificationIfNeed() {
 
 function main() {
 
-  if (!cookie) {
+  if (!cookieHX) {
     console.log('请配置京东cookie!'); return;
   }
 
